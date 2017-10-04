@@ -3,12 +3,12 @@ VERS        = 0.1.0
 CC          = gcc
 LD          = gcc
 
-OPT_FLAGS   =  -O3
+OPT_FLAGS   =  -O2
 
 LIBRARIES   = 
 
-CFLAGS      = $(OPT_FLAGS) -DUSE_MAEMO -Wall   
-LDFLAGS     = -lm -lliqbase
+CFLAGS      = $(OPT_FLAGS) -DUSE_MAEMO -Wall -I /home/burchr/code/libliqbase/
+LDFLAGS     = -lm -L/home/burchr/code/libliqbase/src -lliqbase
 RM          = /bin/rm -f
 
 SUBDIRS     =  

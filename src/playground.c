@@ -818,7 +818,7 @@ liqcell *playground_create()
         
  
 
-
+#if 0
         liqapp_log("liqtwit: looking up twituser credentials");
         char *twitname = liqapp_pref_getvalue("twitname");
         char *twitpass = liqapp_pref_getvalue("twitpass");
@@ -827,6 +827,7 @@ liqcell *playground_create()
             // ok
             addsearchkind( "twitter","/usr/share/liqbase/media/searchimg/twitter.png" , playground_send_tweet );
         } 
+#endif
 
         liqcell_child_arrange_easytile(searchinprogress);
 

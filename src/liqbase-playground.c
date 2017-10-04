@@ -217,7 +217,7 @@ int main (int argc, char* argv[])
     signal(SIGINT, signalhandler);
 	signal(SIGTERM, signalhandler);
 	signal(SIGHUP, signalhandler);
-	signal(SIGSEGV, signalhandler);
+	//signal(SIGSEGV, signalhandler);
 
 	//########################################################## prepare the app
 

@@ -55,7 +55,7 @@ static size_t curl_memorybuffer(void *ptr, size_t size, size_t nmemb, void *data
 
 int liqtwit_sendtweet(char *twitmessage)
 {
-
+return -1;
 	//#################################################
 	liqapp_log("liqtwit: looking up twituser credentials");
 	char *twitname = liqapp_pref_getvalue("twitname");

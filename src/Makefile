@@ -4,14 +4,16 @@ CC          = gcc
 LD          = gcc
 
 
-OPT_FLAGS   =  -O3
+OPT_FLAGS   =  -O2
 DESTDIR	?= tmp
 
 LIBRARIES   =
 # xrandr
 # -DUSE_MAEMO 
-CFLAGS      = -DUSE_MAEMO -Wall   -I/usr/include `pkg-config --cflags  $(LIBRARIES)` 
-LDFLAGS     = -lm -lliqbase `pkg-config --libs $(LIBRARIES)`  -lpthread  -Wl,-export-dynamic -L/usr/local/lib
+CFLAGS      = -DUSE_MAEMO -Wall   -I/usr/include -I /home/burchr/code/libliqbase/ 
+#pkg-config --cflags  $(LIBRARIES)` 
+LDFLAGS     = -lm -L/home/burchr/code/libliqbase/src -lliqbase -lpthread -Wl,-export-dynamic -L/usr/local/lib -lcurl
+#`pkg-config --libs $(LIBRARIES)`  -lpthread  -Wl,-export-dynamic -L/usr/local/lib
 
 RM          = /bin/rm -f
 
